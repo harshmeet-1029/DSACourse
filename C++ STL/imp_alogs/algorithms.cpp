@@ -122,6 +122,8 @@ int main()
     int cnts = __builtin_popcountll(nums);
     cout << endl
          << cnts << endl;
+
+    cout << "<=========================Permutations==================>" << endl;
     /* -----------------------==========Permutations===============--------------------------- */
 
     string s = "123"; // Alwasy start permutation from sorted stuff
