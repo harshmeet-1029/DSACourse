@@ -1,0 +1,88 @@
+Here are the properly formatted notes for you to copy and paste into your editor:
+
+---
+
+### **Space Complexity**  
+Space complexity refers to the amount of memory required by a program to execute and produce output. It is measured using **Big O Notation**, such as O(1), O(n), O(n²), O(n log n), etc.
+
+### **Memory Usage in Space Complexity**  
+For any algorithm, memory is required for the following purposes:  
+1. To store the program instructions.  
+2. To store constant values.  
+3. To store variable values.  
+4. For other things like function calls, jumping statements, etc.
+
+### **Components of Space Complexity**
+1. **Auxiliary Space:** Extra space required to solve the problem (temporary variables, arrays, etc.).
+2. **Input Space:** Space required to store the input.
+
+**Space Complexity Formula:**  
+\[
+\text{Space Complexity} = \text{Auxiliary Space} + \text{Input Space}
+\]
+
+#### **Example Breakdown:**
+- If `a` is an input, it contributes to **input space**.  
+- If `c` is a variable used in calculations, it contributes to **auxiliary space**.  
+
+For example:  
+```python
+c = a + b
+```
+- `a` and `b` are input space.  
+- `c` is auxiliary space.  
+
+---
+
+### **Common Space Complexities**
+
+#### **1. O(1) Constant Space Complexity**  
+This means the program uses a fixed amount of memory regardless of the input size.
+
+**Example:**
+```javascript
+function add(n1, n2) {
+    sum = n1 + n2;
+    return sum;
+}
+```
+- Memory Breakdown:
+  - `n1` takes 4 bytes.  
+  - `n2` takes 4 bytes.  
+  - `sum` takes 4 bytes.  
+  - Total memory: **12 bytes** (fixed).
+- **Space Complexity:** **O(1)**
+
+---
+
+#### **2. O(n) Linear Space Complexity**  
+This means the memory usage grows linearly with the input size.
+
+**Example:**
+```javascript
+function sumOfNumbers(arr, N) {
+    sum = 0;
+    for (let i = 0; i < N; i++) {
+        sum = sum + arr[i];
+    }
+    return sum;
+}
+```
+- Memory Breakdown:
+  - Array `arr` of size `N`: \( N \times 4 \) bytes.  
+  - Variable `sum`: 4 bytes.  
+  - Loop variable `i`: 4 bytes.  
+  - Total: \( 4N + 8 \).  
+- **Space Complexity:** **O(n)**
+
+---
+
+### **Key Takeaways:**
+1. **O(1):** Fixed memory usage, independent of input size.  
+2. **O(n):** Memory usage grows linearly with input size.  
+3. Auxiliary space is additional space required beyond the input size.  
+4. Input space depends directly on the size of the input data.  
+
+--- 
+
+You can paste these notes into your editor for easy reference. Let me know if you'd like any additional clarifications!

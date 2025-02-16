@@ -1,0 +1,75 @@
+The rate at which the time taken increases with respect too the input size rather is called as time complexity 
+
+
+How to calculate the time complexity 
+we use Big oh Notation -> it is like O(<Time taken>)  
+
+Three rules to calculate the Time complexity 
+1. Always calculate in worst case scenario
+2. Avoid constants
+3. Avoid lower values
+ 
+
+The liner behavior of the time complexity goes like 
+O(n) which means with the number of inputs the complexity also increases for example if the input is 10 then the operation will be 10 too but if the N is 10000 then the opeations will be 10000 also 
+this is also called as leaner behavior
+
+
+#Compon Complexities
+1. O(1) Constant  -> When there is only one operation needed to do something like print("Hey") or fetching the value at particular index arr[idx] because i need to fetch the value from the that particular index only like arr[3]
+
+2. O(n) Linear -> 
+Here when the number of input increases the time complexity increases like 
+like printing the all the elements of the array over here as the size of the array Increases the number of operations also increases like 
+a=[1,2,3,4,34,34,3,4,334]
+for (int i=0; i<=a.size()-1;i++){
+	cout<<a[i]<<endl;
+}
+we can see this in linear search also  and over here in worst case i am terversing in the end 
+
+3. O(n^2) Quadratic
+	we find it mostly in nested for loop because we have 
+for (n)
+   for (n) that time we n^2 or for traversing the matrix
+
+4. O(log n) (it is good as compare to O(n)
+	It means that the amount of work the algorithm does increases logarithmically as the input size (n) gets larger.
+For example:
+If you have 10 items, it might take 4 steps.
+If you have 100 items, it might take 7 steps.
+If you have 1000 items, it might take 10 steps.
+
+Imagine you’re looking for a name in a phone book:
+
+Instead of reading every name, you open it in the middle, check where the name is, and go to the correct half.
+Then you repeat this until you find the name. This cutting in half each time is why it's O(log n).
+
+BEST EXAMPLE IS BINARY SEARCH
+Common Algorithms with O(log n)
+Binary Search: Divides the search space in half each step.
+Tree Traversal in Balanced Trees: Like searching in a Binary Search Tree.
+
+5. O(n log n) -> sorting it is better then O(n2)
+	O(n log n) is a measure of time complexity that combines linear growth (O(n)) with logarithmic growth (O(log n)). It means that the algorithm performs n linear operations, and for each of those operations, it does something logarithmic.
+
+Easy Explanation with an Example:
+Let’s use sorting a list as an example:
+
+Imagine you have a list of names to sort alphabetically:
+n represents the number of names in the list.
+Sorting algorithms like Merge Sort or Quick Sort split the list into smaller parts (this splitting is log n, halving the list repeatedly).
+For each of these splits, they process all items in the list (this processing is n, checking or comparing items).
+So the work done is:
+
+Split: log n (halving).
+Process all items in each split: n.
+When combined, it’s n × log n.
+
+6. O(2^n) Exponential TC -> Over her we it mostly with recursion and tree like tree has 2 nodes and we can go as deep as we want (usanlly N) it is most worst time complexity and it is mostly Brute force (we use Dynamic programming (DP)  to fix this Time complexity ) to make it to O(n^2) or O(n)
+
+7. O(n!) -> it is highly worst time complexity we usally see it in permutations 
+
+ 
+
+
+ 

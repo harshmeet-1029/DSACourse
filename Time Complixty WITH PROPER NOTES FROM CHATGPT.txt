@@ -1,0 +1,109 @@
+### Time Complexities
+
+1.  O(1) Constant  
+   - This is when there is only one operation needed to do something. It doesn’t depend on the size of the input.
+   - Example: Printing a value or fetching the value at a particular index.  
+
+     ```  
+     arr[3];  // Fetching the value at index 3
+     cout << "Hey";  // Constant time operation
+     ```
+
+2.  O(n) Linear  
+   - Here, the time complexity increases linearly with the increase in the size of the input.
+   - Example: Printing all elements of an array. As the size of the array increases, the number of operations increases.  
+
+     ```  
+     int a[] = {1, 2, 3, 4, 34, 34, 3, 4, 334};
+     for (int i = 0; i < sizeof(a)/sizeof(a[0]); i++) {
+         cout << a[i] << endl;
+     }
+     ```
+
+   - In linear search, the algorithm might have to traverse the entire array in the worst case.
+
+3.  O(n^2) Quadratic  
+
+   - This time complexity is commonly found in nested loops, as the work is repeated n times for each of the n elements.  
+   - Example: Traversing a matrix or nested loops.  
+     ```  
+     for (int i = 0; i < n; i++) {
+         for (int j = 0; j < n; j++) {
+             // some constant time operation
+         }
+     }
+     ```
+
+4.  O(log n) Logarithmic  
+   - The amount of work the algorithm does increases logarithmically as the input size increases. This is considered much better than O(n).  
+   - Example: Binary Search. The search space is halved with each step, significantly reducing the number of comparisons needed.
+     - If you have 10 items, it takes 4 steps.
+     - If you have 100 items, it takes 7 steps.
+     - If you have 1000 items, it takes 10 steps.
+   -  Best Example: Binary Search  
+     ```  
+     // Binary search pseudocode
+     while (left <= right) {
+         int mid = left + (right - left) / 2;
+         if (arr[mid] == target) {
+             return mid;
+         } else if (arr[mid] < target) {
+             left = mid + 1;
+         } else {
+             right = mid - 1;
+         }
+     }
+     ```
+   - Other common algorithms: Tree Traversal in Balanced Trees (e.g., Binary Search Trees).
+
+5.  O(n log n)  
+   - This combines linear growth (O(n)) with logarithmic growth (O(log n)) and is common in efficient sorting algorithms.
+   - Example: Sorting algorithms like Merge Sort or Quick Sort.
+     - Imagine sorting a list of names:
+       - Split the list (log n) and process each element (n).
+       - Total work: O(n log n).
+   -  Example: Merge Sort 
+     ```  
+     void mergeSort(int arr[], int left, int right) {
+         if (left < right) {
+             int mid = left + (right - left) / 2;
+             mergeSort(arr, left, mid);  // Split left
+             mergeSort(arr, mid + 1, right);  // Split right
+             merge(arr, left, mid, right);  // Merge the two parts
+         }
+     }
+     ```
+
+6.  O(2^n) Exponential  
+   - This time complexity occurs in problems where each decision point branches into two possibilities, such as recursive algorithms. The time grows exponentially with the input size.  
+   - It’s commonly seen in brute force solutions and recursive problems, like calculating Fibonacci numbers or solving problems using recursion with multiple branching.  
+   -  Example: Fibonacci (naive recursive solution) 
+     ```  
+     int fibonacci(int n) {
+         if (n <= 1)
+             return n;
+         return fibonacci(n - 1) + fibonacci(n - 2);
+     }
+     ```
+
+7.  O(n!) Factorial  
+   - This is one of the worst time complexities and is usually found in problems that involve generating all permutations or combinations of a set of elements.
+   -  Example: Generating permutations 
+     ```  
+     // Pseudocode for generating permutations
+     void generatePermutations(int arr[], int start, int end) {
+         if (start == end) {
+             print(arr);
+         } else {
+             for (int i = start; i <= end; i++) {
+                 swap(arr[start], arr[i]);
+                 generatePermutations(arr, start + 1, end);
+                 swap(arr[start], arr[i]); // backtrack
+             }
+         }
+     }
+     ```
+
+--- 
+
+These notes cover the basics of common time complexities with examples. You can expand on these with more detailed explanations or use them directly for reference.

@@ -1,0 +1,204 @@
+The C++ STL is divided into 4 partssss
+1. Algorithms
+2. Containers (it contains vectors,sets, etc..)
+3. Functions 
+4. Iterators
+
+First we will learn Containers and Iterators
+
+Containers
+------------------
+#Pairs
+it is the part of utils libaries 
+now imagine i want to store a couple of integer 
+How we do it 
+
+pair<<datatypes> ,<datatypes> > <var> = {<value>,<value>}
+example
+pair<int,int> p = {1,2}
+
+------------------------------------------------------------
+
+#Vectors
+It is a container which dynamic in nature and we can add as much elements we want it is used when we don't know the size of data
+we are going to add 
+
+#How to define it vector<<datatype>>  <var_name>;
+
+#how to push the data into the vector
+<var_name>.push_back(<data>); 
+
+#How to push the data in the data in back
+<var_name>.emplace_back(<data>);
+
+--------------------------------------------------------------
+#Lists
+It is also like vector which give you front operations as well and it is also dynamic in nature 
+front operations like in vector we have push_back emplace_back IN list we also haveee push_front and emplace_front
+
+like
+
+list<int> ls;
+
+ls.push_back(4); // {2}
+ls.emplace_back(10); //{2,10}
+ls.push_front(1); //{1,2,10}
+ls.emplace_front(2); // {2,1,2,10}
+------------------------------------------------------
+
+Double-ended queues are sequence containers with the feature of expansion and contraction on both ends.
+ They are similar to vectors, but are more efficient in case of insertion and deletion of elements.
+  Unlike vectors, contiguous storage allocation may not be guaranteed.
+Double Ended Queues are basically an implementation of the data structure double-ended queue.
+ A queue data structure allows insertion only at the end and deletion from the front. 
+ This is like a queue in real life, wherein people are removed from the front and added at the back. 
+ Double-ended queues are a special case of queues where insertion and deletion operations are possible at both the ends.
+The functions for deque are same as vector, with an addition of push and pop operations for both front and back.
+
+The time complexities for doing various operations on deques are-
+
+Accessing Elements- O(1)
+Insertion or removal of elements- O(N)
+Insertion or removal of elements at start or end- O(1)
+
+    deque<int> dq;
+    dq.push_back(12);
+    dq.push_front(20);
+    dq.emplace_back(12);
+    dq.emplace_front(20);
+
+    dq.pop_back();
+    dq.pop_front();
+
+    cout << dq.back();
+    cout << dq.front();
+
+----------------------------------------------------------
+Stack is LIFO (last in first out )
+people coming 
+--
+   [-------] -> counter
+
+stack<int> s;
+s.push(19);
+[19]
+s.push(20);
+[19]
+[20]
+s.push(21);
+[19]
+[20]
+[21]
+s.push(22);
+[19]
+[20]
+[21]
+[22]
+s.push(23);
+[19]
+[20]
+[21]
+[22]
+[23]
+s.emplace(5); // IT WILL ADD ELEMENT AT THE last
+[5]
+[19]
+[20]
+[21]
+[22]
+[23]
+
+cout<<s.top();//it will print 5 becuase 5 is at top
+
+s.pop(); // it will remove from end
+s.size();// it tell the size of it
+s.empty(); empty the stack
+
+stack<int> s1,s2;
+s.swap(s2)
+
+
+----------------------------------------------------------
+Queue is LILO (first in first out )
+queue<int> q;
+q.push(1)
+q.push(2)
+q.emplace(4)// {1,2,4}
+
+q.back()+=5 //4+5
+
+cout<<q.back(); // 9 as 4+5 is 9
+cout<<q.front(); // print 1
+
+q.pop(); //{2,9}
+cout<<q.front(); // print 2
+----------------------------------------------
+Priority Queue
+Over here the largest element stay at the top 
+Over here the tree is maintned 
+//Max heap
+priority_queue<int> q;
+q.push(5); {5}
+q.push(2); {5,2}
+q.push(8); {8,5,2}
+q.push(10); {10,8,5,2}
+
+cout<<q.top(); //print 10
+
+q.pop(); // {8,5,2}
+
+
+
+//min heap over here the smallset one is on top
+priority_queue<int,vector<int>,greater<int>> q;
+
+q.push(5); {5}
+q.push(2); {5,2}
+q.push(8); {8,5,2}
+q.push(10); {10,8,5,2}
+
+cout<<q.top(); //print 10
+
+q.pop(); // {8,5,2}
+
+Time complixty
+push -> log(n)
+top -> o(1)
+pop -> log(n)
+-----------------------------------------------
+set
+It is used to store the collection of data
+IT store the data in sorted order
+it does not allow duplicate values
+
+-------------------------------------------
+Multiset
+it is like the set only but it keep the content 
+sorted it is not like key the unique values we can add as many times we want the same data
+but when we erase the one time which has duplicate values it will remove all the duplate values too
+---------------------------------------
+unordered set
+It is used to store the collection of data
+IT store the data in unordered order
+it does not allow duplicate values
+Rest all is same
+---------------------------------------
+Map
+it is exactly like dict in python
+
+{key:value} it has key value pair 
+
+it can have duplicate value but not key 
+Key cab be of any datatype
+value can be anything too
+---------------------------------------
+MultiMap
+In this we can store duplicate keys also along with values
+AND IT IS STORED
+rest all is same 
+
+---------------------------------------
+
+unorderedmap 
+it is just not in sorted rest all is same 
+and has unique keys
