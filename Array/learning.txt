@@ -1,0 +1,16 @@
+#Array
+It is used to store the colelction of similar type of data in it 
+How to define an Array
+int arr[6] -> it will going to store the data with the garbage value if we define it in the main function
+
+int arr[2] ->  if  i define it outside the int main which we call as global define then all the array will fill with 0 like
+[0,0]
+int main(){
+    int arr[2] -> it will have [<grabage value>,<grabage value>]
+
+}
+
+the max size of the array i can define is [10^6] inside the int main 
+and if i define it globally then its max size will be [10^7]
+
+whenever we define an array is get stored at the random address which we can not predict so what we can do is we can access it based on its index 
