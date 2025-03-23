@@ -6,32 +6,46 @@ using namespace std;
 /*
 There are brute, better and optimal solution exist
 
+Brute force approch
+
+for (int i = 0; i < k; i++) {
+    nums.insert(nums.begin(), nums[nums.size() - 1]); // Insert at beginning -> O(n)
+    nums.pop_back(); // Remove last element -> O(1)
+}
 
 
-Optimal Solution
+Why is it Brute Force?
+Repeatedly moving elements → Every rotation takes O(n), leading to O(k * n), which is very slow for large k and n.
+
+Does not leverage patterns → A rotation can be done efficiently in O(n), so an O(k * n) solution is overkill.
+
+
+
+
+
+
 */
 
 int main()
 {
-    int k = 54944;
+    int k = 8;
     vector<int> nums = {1, 2, 3, 4, 5, 6, 7};
 
     /*
-            Since rotating an array of size n by n positions results in the same array, we can reduce k using modulo:
+        Optimal Solution
 
-            k=k%n
-            This ensures that k is always within the array size and avoids unnecessary rotations.
+        The main reason to do k=k%n is the check that which will be final roation after it completed one roating like
+        my array size is 7 and lets take my k is 8
+        so after 7 roation it will be same array
+        and then i need to roate only once like
+        7+1 = 8 so i need to rotate it only once
 
-            Example Calculation
-            Let’s assume:
+        if i do my k%n; then it will be
 
-            Array size (n) = 10
+        k = 8
+        n = 7
 
-            Given k = 54944
-
-            Reduce k:
-            k=54944%10=4
-            Instead of rotating 54944 times, we only need to rotate 4 times.
+        7%8 = 1
 
     */
     int n = nums.size();
