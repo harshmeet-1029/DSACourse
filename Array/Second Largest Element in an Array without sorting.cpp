@@ -69,9 +69,41 @@ int main()
     tc -> O(2n)
     */
 
-    /* 
+    /*
     Optimal solution
+    [1,2,4,7,7,5]
 
-    https://youtu.be/37E9ckMDdTk?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB&t=1321
+    So over here what we can do is we can assign two values
+
+    largest = a[0]
+    seconLargest = -1
+
+    1. what we need to do is travese from 2 to last element
+    2. we need to check if second element is largest then the current element if yes then largest = a[i(current index)] and assign the second largest with the largest prev value
+    else if both are equal then do nothing
+    3. iteratre to next element and check if it is smaller than the current element then check if it is smaller then check if it greater than the second largest element then assing it else do nothing
+
     */
+
+    vector<int> arr = {1, 2, 4, 7, 7, 5};
+
+    int largest = arr[0];
+    int secondLargest = -1;
+    for (int i = 0; i < arr.size(); i++)
+    {
+        if (arr[i] > largest)
+        {
+            secondLargest = largest;
+            largest = arr[i];
+        }
+        if (arr[i] < largest)
+        {
+            if (arr[i] > secondLargest)
+            {
+                secondLargest = arr[i];
+            }
+        }
+    }
+
+    cout << secondLargest;
 }
