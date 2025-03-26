@@ -1,1 +1,1 @@
-# DSACourse
+# DSA Course
