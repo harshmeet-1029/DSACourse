@@ -56,18 +56,23 @@ a.insert(a.end()-c.size(),0)
 int main()
 {
     vector<int> a = {1, 0, 34, 0, 6, 7, 0, 78};
-    int j = 0;
+    int j = -1;
+    // FInd the non zero index
     for (int i = 0; i < a.size(); i++)
+    {
+        if (a[i] == 0)
+        {
+            j = i;
+            break;
+        }
+    }
+
+    for (int i = j + 1; i < a.size(); i++)
     {
         if (a[i] != 0)
         {
-
-            a[j] = a[i];
-            a[i] = 0;
-        }
-        else
-        {
-            j = i;
+            swap(a[i], a[j]);
+            j++;
         }
     }
 
