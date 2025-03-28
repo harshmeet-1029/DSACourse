@@ -1,6 +1,6 @@
 Here are the properly formatted notes for you to copy and paste into your editor:
 
----
+---==
 
 ### **Space Complexity**  
 Space complexity refers to the amount of memory required by a program to execute and produce output. It is measured using **Big O Notation**, such as O(1), O(n), O(n²), O(n log n), etc.
