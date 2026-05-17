@@ -1,0 +1,31 @@
+
+CORE DATASTRCUTES
+-----------------------------------------------------------
+-----------------------------------------------------------
+1.LINKED LIST
+Now what is a linked list it is a series of nodes which is connected by a pointer now what does that means that 
+it holds two data together one is the data itself and 2nd the pointer to the next node itself over here one block 
+is called as node now what is that one block means 1 block means with where a data in the next element pointer is 
+connected that's what we call as a node which are connected using the pointer which is pointing to the next one now 
+the benefit of this thing is that over here finding the data is very easy find not finding the data inserting and 
+deleting the data is like very much easy Not the reason the indistinguish that when a node is having one data it 
+is also having the pointer to the next node itself now if I want to add a new data I can just simply E store the 
+new data's pointer in that node like that I can insert it very easily and for deletion I can just like skip that 
+node itself like for example if I want to delete the node B I can just Simply put the pointer of C in A node
+
+
+
+2. stack 
+Stack is like a pile of books uh it is  (we use lists)
+Operations are push and pop 
+
+3. Queue
+its liek adding data from from and getting it from back it is FIFO  First in first out 
+Operations
+Enqueue
+Dequeue
+
+4. Hash Map (Dict)
+Now hash maps are too like the dictionary it stores the value in key value player and it is
+one of the most efficient data structures in whole thing because all the operations
+take O(1) value because like we gave us the key and it totally jumps on that key and finds the value for us

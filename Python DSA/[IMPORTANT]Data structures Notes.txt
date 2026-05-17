@@ -1,0 +1,18 @@
+Data structures
+time complixity 
+
+Now what is the time complexity it is the fundamental thing to measure how efficient my program is it is independent like we don't care about like what is our system is like it's high end system or low end system it doesn't matter what the time complexity helped us to do is it help us to check that how efficient my whole program or algorithm is as comparative to others The benefit of this thing is that we do not have infinite memory or infinite speed So that's why we use time complexity or we can say a efficiency or big O notation
+
+Now what is a big O notation it is the universal language of checking the these things there are two things time complexity and space complexity now begin notation have multiple ways to check the sorry we are having like multiple parameters to 
+
+check the time and space complexity First for what's the time complexity time complexity is that how much time does it take to perform that task as we increase the number of inputs and space complexity that how much time does it takes how much space does it take as the input increases does it take like a lot of memory like 234GB of memories or lesser like 1234 153 KBS like this and or it even impact the space complexity or not like even it takes the space or not it totally depends upon that
+
+
+Types of Big O notation
+o(1) -> Oh 1 Now what does Ovan do it is one of the efficient way of doing anything It it's time does not increase as the input size increases it remains constant it's one of the most efficient 1
+
+o(N) Liner -> Now comes the oh any notation So what does ON notation do uh it is efficient but it is normal for I mean you can say for the time complexity as what happened was that as the input size increases the time also increases but you might say that it is inefficient that time is also increases but now let's take an example that I want to sort something or I need to find something which is not in sorting order now the worst case of this thing is that the thing is at the end place at the end of an array so for that thing I need to go over all the lists that I need to go to the whole list to find that particular thing now in that case our thing goes as in O like for example loop over also input size is increasing you have to loop over every single thing that's what the on notation do
+
+o(log n) -> Now oorog N is one of the most efficient except for O-1 why because over here our times get half as the input size increases now let's take an example of this thing as a dictionary OK now I need to find a word in dictionary I open the dictionary in half now what happens is I need to find the meaning of R So what I am going to do is I am going to first of all I need the harsh word is on the left side of the dictionary So my all the right side of words become canceled out so that means that becomes how now I pick up that thing and open that thing in half that other section also of the left side and then again I check out that my hush or H will be on the right side So now all the left side of things becomes half because I removed out so my dad thing becomes half so my times keep on getting decreased
+
+o(n log n) ->   Not this kind of notation we can say is not efficient as compared to linearor or we can say as O(n) but its most efficient one for the sorting purposes  like merge sort or quick sort 
